@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:maxit_olib_training/contact-management/contact.page.dart';
 import 'package:maxit_olib_training/pages/navigation.page.dart';
 
 void main() {
@@ -13,10 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter training",
-      // theme: ThemeData(
-      //   primaryColor: Col
-      // ),
-      home: ContactListPage(),
+      home: NavigationPage(),
     );
   }
 }

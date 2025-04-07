@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maxit_olib_training/constants/color.dart';
 
 void main() {
   runApp(ProfileApp());
@@ -9,7 +10,7 @@ class ProfileApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Profile Card',
-      theme: ThemeData(primarySwatch: Colors.teal),
+      theme: ThemeData(primarySwatch: CustomColor.primary),
       home: ProfilePage(),
     );
   }
@@ -32,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[100],
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(title: const Text("Profile Card")),
       body: Center(
         child: Card(
@@ -45,9 +46,10 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 40,
-                  child: Icon(Icons.person),
+                  backgroundColor: CustomColor.primary,
+                  child: const Icon(Icons.person),
                 ),
                 const SizedBox(height: 12),
                 const Text("Abdoulaye Traoré",
@@ -57,6 +59,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     style: TextStyle(color: Colors.grey[700])),
                 const SizedBox(height: 16),
                 ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          CustomColor.primary)),
                   onPressed: _toggleContact,
                   child: Text(_showContact ? "Hide Contact" : "Show Contact"),
                 ),
@@ -64,19 +69,19 @@ class _ProfilePageState extends State<ProfilePage> {
                   const SizedBox(height: 12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.phone, color: Colors.teal),
-                      SizedBox(width: 8),
-                      Text("+231 77 777 77 77"),
+                    children: [
+                      Icon(Icons.phone, color: CustomColor.primary),
+                      const SizedBox(width: 8),
+                      const Text("+231 77 777 77 77"),
                     ],
                   ),
                   const SizedBox(height: 8),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.email, color: Colors.teal),
-                      SizedBox(width: 8),
-                      Text("abdoulaye@example.com"),
+                    children: [
+                      Icon(Icons.email, color: CustomColor.primary),
+                      const SizedBox(width: 8),
+                      const Text("abdoulaye.traore@orangemali.com"),
                     ],
                   ),
                 ]
@@ -86,5 +91,9 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
       ),
     );
+  }
+
+  get _color {
+    return Colors.amber.shade900;
   }
 }

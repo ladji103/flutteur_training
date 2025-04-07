@@ -1,4 +1,4 @@
-# maxit_olib_training
+# flutter_training
 
 A new Flutter project.
 
@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![alt text](./Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202025-04-07%20at%2017.45.46.png)
+
+![alt text](./Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202025-04-07%20at%2017.45.51.png)
+
+![alt text](./Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202025-04-07%20at%2017.46.17.png)
+
+![alt text](./Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202025-04-07%20at%2017.46.20.png)

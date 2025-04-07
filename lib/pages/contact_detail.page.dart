@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:maxit_olib_training/contact-management/models/contact.model.dart';
+import 'package:maxit_olib_training/models/contact.model.dart';
 
 class ContactDetailPage extends StatelessWidget {
   final Contact contact;
 
-  ContactDetailPage({required this.contact});
+  const ContactDetailPage({super.key, required this.contact});
 
   @override
   Widget build(BuildContext context) {

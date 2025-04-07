@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:maxit_olib_training/contact-management/add_contact.component.dart';
-import 'package:maxit_olib_training/contact-management/contact_detail.page.dart';
-import 'package:maxit_olib_training/contact-management/models/contact.model.dart';
+import 'package:maxit_olib_training/models/contact.model.dart';
+import 'package:maxit_olib_training/pages/contact_detail.page.dart';
+
+import 'add_contact.page.dart';
 
 class ContactListPage extends StatefulWidget {
+  const ContactListPage({super.key});
+
   @override
   State<ContactListPage> createState() => _ContactListPageState();
 }
@@ -30,7 +33,7 @@ class _ContactListPageState extends State<ContactListPage> {
   void _openAddContactPage() async {
     final newContact = await Navigator.push<Contact>(
       context,
-      MaterialPageRoute(builder: (_) => AddContactPage()),
+      MaterialPageRoute(builder: (_) => const AddContactPage()),
     );
 
     if (newContact != null) {
@@ -63,7 +66,7 @@ class _ContactListPageState extends State<ContactListPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _openAddContactPage,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         tooltip: 'Add Contact',
       ),
     );

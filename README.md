@@ -1,4 +1,4 @@
-# maxit_olib_training
+# flutter_training
 
 A new Flutter project.
 
